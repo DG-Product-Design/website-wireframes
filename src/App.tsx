@@ -13,7 +13,7 @@ const App = () => {
 
 	return (
 		<Suspense fallback={'Loading...'}>
-			<BrowserRouter basename='/website'>
+			<BrowserRouter basename='/'>
 				<Routes>
 					<Route path="/" element={<Homepage  />} />
 					<Route path="*" element={<Navigate replace to="/"  />} />

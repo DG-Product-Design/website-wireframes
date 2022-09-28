@@ -16,7 +16,7 @@ const HeadlineBlock = (props: {
 			<div className="text-body-lg text-center max-w-screen-sm mt-4 mx-auto">
 				{props.boldText && (
 					<React.Fragment>
-						<p className="text-body-lg-bold">{props.boldText}</p>
+						<p className="text-body-lg-bold py-2">{props.boldText}</p>
 					</React.Fragment>
 				)}
 				{props.defaultText}
