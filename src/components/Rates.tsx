@@ -1,30 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Icon } from '@j33p1n/component-library';
+import { getRates } from '../services/getRates';
 
 const Rates = () => {
 	const [rates, setRates] = React.useState<any>([]);
-
-	async function getRates() {
-		const baseUrl = 'https://apps-dev.capcenter.com/QuoteService/api/Quote/Rates?';
-		const queryUrl = 'CountyID=123&LoanPurposeID=2&LoanProgramID=0&LoanTermID=0&LoanTypeID=1&PropertyUseID=1&LoanAmountValue=320000';
 	
-		try {
-			let response = await fetch(baseUrl + queryUrl)
-			let parsedResponse = await response.json();
-			let ratesData = parsedResponse;
-	
-			return setRates(ratesData);
-			// return console.log('quoteRates', quoteRates);
-		} catch (err) {
-			console.log('Error retrieving rates: ' + err);
-	
-			return 'Unexpected database error while retrieving rates. Please try again later.'
+	const getRateData = async () => {
+		const ratesData = await getRates();
+		if (ratesData !== false ) {
+			setRates(ratesData);
 		}
-	}
+	};
 
 	React.useEffect(() => {
-		getRates();
+		getRateData();
 	}, [])
 
 	const RateCardDisplay = () => {
@@ -78,7 +68,7 @@ const Rates = () => {
 							rate={rates.Products[0].Rates[2].BaseRate}
 							apr={rates.Products[0].Rates[2].Apr}
 							pts={rates.Products[0].Rates[2].Points}
-							className='shadow-xl lg:mt-22 z-20' 
+							className='shadow-xl mt-8 lg:mt-22 z-20' 
 						/>
 					</div>
 					<div className="w-full lg:w-auto flex flex-wrap justify-center gap-6 md:gap-4 xl:gap-6">
