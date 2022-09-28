@@ -1,0 +1,38 @@
+[
+	{
+		"city": "Clemson",
+		"state": "SC",
+		"name": "Draymond G.",
+		"quote": "Our agent was wonderful!!! He had excellent follow-up and communication throughout the entire process."
+	},
+	{
+		"city": "Greenville",
+		"state": "NC",
+		"name": "Larry B.",
+		"quote": "My wife and I were very satisfied with the level of service provided by our CapCenter agent. She recommended a good and fair listing price for our home and within a day we had multiple offers."
+	},
+	{
+		"city": "Charlottesville",
+		"state": "VA",
+		"name": "Michael J.",
+		"quote": "It was a very smooth transaction, that's why we came back to CapCenter. You all know your business and do it very well."
+	},
+	{
+		"city": "Frederick",
+		"state": "MD",
+		"name": "Scotty P.",
+		"quote": "My agent was always mindful of my situation and offered the best support."
+	},
+	{
+		"city": "Bethany Beach",
+		"state": "DE",
+		"name": "Steph C.",
+		"quote": "I love CapCenter. They are awesome. I would recommend them to a friend any day."
+	},
+	{
+		"city": "Raleigh",
+		"state": "NC",
+		"name": "Shaquille O.",
+		"quote": "I would recommend CapCenter to a friend any day. I love CapCenter. They are awesome."
+	}
+]
